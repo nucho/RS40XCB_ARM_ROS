@@ -1,0 +1,20 @@
+rostopic pub ArmTimeSet std_msgs/Int32MultiArray [[['a',3,3]],0] [10,11,12]
+rostopic pub ArmPositionSet std_msgs/Int32MultiArray [[['a',3,3]],0] [0,0,0]
+rostopic pub ArmPositionSet std_msgs/Int32MultiArray [[['a',3,3]],0] [1000,1000,1000]
+rostopic pub ArmTorqueSet std_msgs/Int32MultiArray [[['a',3,3]],0] [1,1,1]
+rostopic pub ArmTorqueSet std_msgs/Int32MultiArray [[['a',3,3]],0] [0,0,0]
+
+1このとき
+rostopic pub ArmTorqueSet std_msgs/Int32MultiArray [[['a',1,1]],0] [1]
+rostopic pub ArmPositionSet std_msgs/Int32MultiArray [[['a',1,1]],0] [0]
+rostopic pub ArmPositionSet std_msgs/Int32MultiArray [[['a',1,1]],0] [1000]
+
+2このとき
+rostopic pub ArmTorqueSet std_msgs/Int32MultiArray [[['a',1,1]],0] [1,1]
+rostopic pub ArmPositionSet std_msgs/Int32MultiArray [[['a',1,1]],0] [0,0]
+
+3このとき
+rostopic pub ArmTorqueSet std_msgs/Int32MultiArray [[['a',1,1]],0] [1,1,1]
+rostopic pub ArmPositionSet std_msgs/Int32MultiArray [[['a',1,1]],0] [0,0,0]
+rostopic pub ArmPositionSet std_msgs/Int32MultiArray [[['a',1,1]],0] [1000,-1000,1000]
+rostopic pub ArmPositionSet std_msgs/Int32MultiArray [[['a',1,1]],0] [-1000,-1000,-1000]

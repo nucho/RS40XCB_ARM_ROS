@@ -1,0 +1,11 @@
+<launch>
+
+   <node name="rs40xcb_arm" pkg="rs40xcb_arm" type="rs40xcb_arm.py" respawn="false" output="log">
+           <param name="baud" type="int" value="115200" />
+           <param name="port" type="string" value="/dev/ttyUSB0"/>
+           <param name="startID" type="int" value="1"/>
+           <param name="endID" type="int" value="3"/>
+   </node>
+
+</launch>
+
